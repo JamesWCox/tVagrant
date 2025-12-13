@@ -56,7 +56,7 @@ Vagrant.configure("2") do |config|
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
   # Shared folder guest path must be absolute 
-  config.vm.synced_folder "c:/users/jwc/data_share", "/data_share"
+  config.vm.synced_folder "c:/users/jwc/data_share", "/home/vagrant/data_share"
   #config.vm.synced_folder "c:/users/jwc/.ssh", "/home/vagrant/.ssh"
   
   #config.vm.provision :shell do |s|
@@ -76,7 +76,8 @@ Vagrant.configure("2") do |config|
   # Example for VirtualBox:
   config.vm.provider "virtualbox" do |vb|
     vb.gui = true # Display the VirtualBox GUI when booting the machine
-	vb.cpus = "4"
+    # https://askubuntu.com/a/1512372
+	  vb.cpus = "2"
     vb.memory = "8192" # Customize the amount of memory on the VM
 	
 	# clipboard, drag & drop, notifications support
