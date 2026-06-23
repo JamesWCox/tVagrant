@@ -2,7 +2,11 @@
 
 [GitHub](https://github.com/JamesWCox/tVagrant)
 
-For Windows batch files :
+## Usage
+> git clone https://github.com/JamesWCox/tVagrant $(VM_NAME)
+
+
+### For Windows batch files :
 Use the special %0 variable to get the path to the current file.
 
 Write %~n0 to get just the filename without the extension.
